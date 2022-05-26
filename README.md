@@ -7,6 +7,7 @@ Utilizing the openshift-client `(oc)` image that is readily available within the
 |:---------:|:--------|
 |containerfiles| location of containerfile that gets included in build config.|
 |manifests| openshift manifests for imagestream and buildconfig|
+|cli-tools| Helm Chart for automated deployments of the buildconfig and imagestream|
 
 #### Usage (manual installation)
 The `oc` image is using `ubi8/ubi` as its base image - to add anything additional update 
@@ -20,3 +21,6 @@ Create the buildconfig in whichever application project. The buildconfig will po
 
 `oc create -f cli-tools-bc.yaml`
 
+Create an application in argocd, or install the chart locally in the cluster
+
+`helm install cli-tools ./cli-tools`
