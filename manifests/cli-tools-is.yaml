@@ -10,6 +10,6 @@ spec:
   - name: latest
     from:
       kind: DockerImage
-      name: openshift/cli
+      name: image-registry.openshift-image-registry.svc:5000/openshift/cli
     referencePolicy:
       type: Source
